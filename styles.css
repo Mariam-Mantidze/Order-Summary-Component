@@ -64,6 +64,9 @@ body {
   margin: auto;
   margin-top: 20px;
 }
+.offer:hover {
+  cursor: pointer;
+}
 
 .plan-details {
   display: flex;
@@ -73,11 +76,21 @@ body {
   gap: 6px;
 }
 
-.offer img {
+.offer svg {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
   margin: 25px 20px 25px 24px;
+}
+.offer:hover svg {
+  transition: transform 1s ease-in-out;
+  transform: rotate(360deg);
+}
+.offer:hover svg path {
+  fill: #cd7df3;
+}
+.offer:hover svg circle {
+  fill: #75ecca;
 }
 
 .offer h2 {
@@ -93,7 +106,6 @@ body {
 .offer p {
   width: 92px;
   color: #717fa6;
-  font-family: Red Hat Display;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -102,7 +114,6 @@ body {
 
 .offer a {
   color: #382ae1;
-  font-family: Red Hat Display;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -112,11 +123,21 @@ body {
   margin-top: 40px;
   margin-bottom: 39px;
 }
+.offer a:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
 
 .payment-button {
   display: flex;
   justify-content: center;
   margin-top: 32px;
+}
+.payment-button button:hover {
+  cursor: pointer;
+  border-radius: 11px;
+  background: #766cf1;
+  box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
 }
 
 .payment-button button {
@@ -150,7 +171,12 @@ body {
   line-height: normal;
 }
 
-.offer img:hover {
-  transition: 0.7s;
-  transform: rotate(360deg);
+.cancel-order:hover {
+  cursor: pointer;
+  color: #1f2e55;
+  font-family: Red Hat Display;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
 }
