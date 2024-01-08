@@ -4,7 +4,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   background-color: #e0e8ff;
   min-height: 100vh;
-  background-image: url(./images/pattern-background-desktop.svg);
+  background-image: url(./images/pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -13,72 +13,52 @@ body {
 }
 
 .card {
-  width: 450px;
-  height: 697px;
-  flex-shrink: 0;
+  background: #e0e8ff;
+  width: 327px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+  overflow: hidden;
+}
+
+.main-img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 32px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
-  padding: 0;
-  /* background-size: contain; */
+  flex-direction: column;
 }
-
-.main-img img {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-
-.header h1 {
-  width: 354px;
+.title {
   color: #1f2e55;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
+  font-style: normal;
   font-weight: 900;
-  margin-top: 45px;
+  line-height: normal;
 }
 
-.header p {
-  width: 354px;
+.description {
   color: #717fa6;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 26px; /* 162.5% */
-  margin-top: 23px;
+  line-height: 25px; /* 166.667% */
+  margin-top: 16px;
 }
 
 .offer {
-  width: 354px;
-  height: 98px;
-  flex-shrink: 0;
-  border-radius: 11px;
-  background: #f7f9ff;
+  width: 100%;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
+  border-radius: 11px;
+  background: #f7f9ff;
   align-items: center;
-  margin-top: 20px;
-}
-.offer:hover {
-  cursor: pointer;
-}
-
-.plan-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-right: auto;
-  gap: 10px;
-}
-
-.offer svg {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  margin: 25px 20px 25px 24px;
+  margin-top: 24px;
 }
 .offer:hover svg {
   transition: transform 1s ease-in-out;
@@ -91,71 +71,122 @@ body {
   fill: #75ecca;
 }
 
-.offer h2 {
-  width: 117.19px;
-  color: #1f2e55;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.offer p {
-  width: 92px;
-  color: #717fa6;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.offer a {
-  color: #382ae1;
+.annual {
+  display: flex;
+  gap: 20px;
   font-size: 14px;
-  font-weight: 700;
-  text-decoration-line: underline;
-  margin-right: 24px;
+  align-items: center;
+}
+.annual .header {
+  color: #1f2e55;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
 }
 
-.offer a:hover {
+.annual .price {
+  color: #717fa6;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.change-link {
+  color: #382ae1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.change-link:hover {
   color: #766cf1;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-.payment-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
-}
-.payment-button button:hover {
-  cursor: pointer;
-  border-radius: 11px;
-  background: #766cf1;
-  box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
-}
-
-.payment-button button {
-  width: 354px;
-  height: 50px;
-  flex-shrink: 0;
+.payment {
+  width: 100%;
   border-radius: 11px;
   background: #382ae1;
   box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+  height: 50px;
+  border: none;
+  margin-top: 24px;
 
   /* text */
   color: #fff;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 15px;
+  font-style: normal;
   font-weight: 900;
-  border: none;
+  line-height: normal;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.cancel-order {
+.payment:hover {
+  background: #766cf1;
+  transition: 0.3s;
+}
+
+.cancel {
   color: #717fa6;
   font-size: 15px;
+  font-style: normal;
   font-weight: 900;
-  width: fit-content;
-  margin-top: 32px;
+  line-height: normal;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cancel:hover {
+  color: #1f2e55;
+  transition: 0.3s;
 }
 
-.cancel-order:hover {
-  cursor: pointer;
-  color: #1f2e55;
-  font-size: 15px;
-  font-weight: 900;
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+  .card {
+    width: 450px;
+  }
+  .card-content {
+    padding: 45px 48px 48px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .description,
+  .annual {
+    font-size: 16px;
+  }
+  .change-link {
+    font-size: 14px;
+  }
+
+  .flex-group {
+    gap: 6px;
+  }
+  .description {
+    margin-top: 17px;
+  }
+  .offer {
+    margin-top: 20px;
+    padding: 25px 24px;
+  }
+  .payment {
+    margin-top: 32px;
+  }
+  .cancel {
+    margin-top: 32px;
+  }
 }
